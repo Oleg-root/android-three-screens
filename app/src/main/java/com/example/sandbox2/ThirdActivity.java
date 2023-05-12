@@ -20,6 +20,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ThirdActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         };
         btnToSecond.setOnClickListener(oclbtnToSecond);

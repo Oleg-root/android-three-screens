@@ -21,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         };
         btnToMainScreen.setOnClickListener(oclBtnToMain);
