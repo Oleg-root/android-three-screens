@@ -9,11 +9,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView plList;
-
-
     // переопределяем метод чтоб связать наш Activity с файлом layout (activity_main.xml)
+    // R - это класс, генерируется самим андройдом для того, чтобы
+    // можно было обратиться к ресурсам нашего приложения (res)
+    // setContentView забирает xml layout и встраивает его в экран, чтобы отобразить пользователю
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,19 +32,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-        // R - это класс, генерируется самим андройдом для того, чтобы
-        // можно было обратиться к ресурсам нашего приложения (res)
-        // setContentView забирает xml layout и встраивает его в экран, чтобы отобразить пользователю
-
-
-//        plList = findViewById(R.id.tv_pl_names);
-//
-//        String[] names = {"Java", "Python", "C++", "Go", "BrainFuck"};
-//
-//        for (String name : names) {
-//            plList.append(name + "\n");
-//        }
     }
 }
