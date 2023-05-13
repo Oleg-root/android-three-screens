@@ -14,12 +14,13 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        Button btnToSecond = (Button)findViewById(R.id.btnToSecond);
+        Button btnToSecond = findViewById(R.id.btnToSecond);
 
         View.OnClickListener oclbtnToSecond = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ThirdActivity.this, SecondActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         };

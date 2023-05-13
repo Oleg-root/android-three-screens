@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     // переопределяем метод чтоб связать наш Activity с файлом layout (activity_main.xml)
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnToSecondScreen = (Button)findViewById(R.id.btnToSecondScreen);
+        Button btnToSecondScreen = findViewById(R.id.btnToSecondScreen);
 
         View.OnClickListener oclBtnToSecond = new View.OnClickListener() {
             @Override

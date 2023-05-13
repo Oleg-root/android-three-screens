@@ -14,13 +14,14 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Button btnToMainScreen = (Button)findViewById(R.id.btnToMainScreen);
-        Button btnToThirdScreen = (Button)findViewById(R.id.btnToThirdScreen);
+        Button btnToMainScreen = findViewById(R.id.btnToMainScreen);
+        Button btnToThirdScreen = findViewById(R.id.btnToThirdScreen);
 
         View.OnClickListener oclBtnToMain = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         };
